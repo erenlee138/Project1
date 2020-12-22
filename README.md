@@ -4,7 +4,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![TODO: Update the path with the name of your diagram](Diagrams/Network_Diagram.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to recreate the entire deployment pictured above. Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
 
 ```
 ---
@@ -65,7 +65,7 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly stable, in addition to restricting access to the network. This ensures consistent availability of network resources.
+Load balancing ensures that the application will be highly stable, in addition to restricting access to the network. This ensures consistent and appropriate availability of network resources.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file system and system logs.
 
@@ -102,7 +102,7 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because multiple machines can be configured simultaneously, ensuring consistency and effifiency.
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because multiple machines can be configured simultaneously, ensuring consistency and efficiency.
 
 The playbook implements the following tasks:
 - Install Docker
@@ -131,8 +131,8 @@ FileBeat allows us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the install-elk.yml file to /etc/ansible/.
-- Update the hosts file to include the IP addresses of machines you wish to run the playbook on. Separate them in groups, labeling the Filebeat machines group "webservers" and the ELK server "elkservers"
+- Copy the `install-elk.yml` file to `/etc/ansible/`.
+- Update the hosts file to include the IP addresses of machines you wish to run the playbook on. Separate them in groups, labeling the Filebeat machines group `[webservers]` and the ELK server `[elkservers]`.
 
 ```[webservers]
 ## alpha.example.org
