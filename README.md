@@ -144,7 +144,8 @@ SSH into the control node and follow the steps below:
 10.0.0.8 ansible_python_interpreter=/usr/bin/python3
 
 [elkservers]
-10.1.0.4 ansible_python_interpreter=/usr/bin/python3```
+10.1.0.4 ansible_python_interpreter=/usr/bin/python3
+```
 
 - Run the playbook, and navigate to http://52.170.82.3:5601/app/kibana to check that the installation worked as expected.
 
