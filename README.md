@@ -65,12 +65,10 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly stable, in addition to restricting access to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+Load balancing ensures that the application will be highly stable, in addition to restricting access to the network. This ensures consistent availability of network resources.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file system and system logs.
+
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -88,7 +86,8 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jumpbox Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP address:
--73.63.72.79
+
+- 73.63.72.79
 
 Machines within the network can only be accessed by the Jumpbox Provisioner.
 
@@ -104,13 +103,13 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because multiple machines can be configured simultaneously, ensuring consistency and effifiency.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- Install Docker
+- Install Python
+- Increase the amount of virtual memory
+- Download and launch a Docker ELK container.
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
